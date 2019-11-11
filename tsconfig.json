@@ -4,32 +4,53 @@
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "noImplicitThis": true,
     "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
     "noEmitOnError": false,
     "noEmit": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
     "baseUrl": ".",
     "module": "es6",
+    "experimentalDecorators": true,
     "paths": {
       "dummy/tests/*": [
         "tests/*"
       ],
       "dummy/*": [
-        "tests/dummy/app/*"
+        "tests/dummy/app/*",
+        "app/*"
       ],
       "ember-debug-logger": [
         "addon"
       ],
       "ember-debug-logger/*": [
         "addon/*"
+      ],
+      "ember-debug-logger/test-support": [
+        "addon-test-support"
+      ],
+      "ember-debug-logger/test-support/*": [
+        "addon-test-support/*"
+      ],
+      "*": [
+        "types/*"
       ]
     }
   },
   "include": [
-    "addon",
-    "tests"
+    "app/**/*",
+    "addon/**/*",
+    "tests/**/*",
+    "types/**/*",
+    "test-support/**/*",
+    "addon-test-support/**/*"
   ]
 }
